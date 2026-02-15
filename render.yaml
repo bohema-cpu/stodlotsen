@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: stodlotsen
+    runtime: python
+    pythonVersion: "3.11.0"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py --web
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+    plan: free
